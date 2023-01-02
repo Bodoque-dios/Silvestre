@@ -1,17 +1,5 @@
 # Silvestre
 
+Local moodle plugin named after this guy:
 
-
-# TO DO/BUGS
-
-- [x] bloquear botones ya dado like
-- [x] el ultimo post se rompe al dar like
-- [x] subir archivo
-- [X] sacar comentarios random
-- [X] limpiar archivos
-    - [x] amd/src/*
-    - [x] classes/external
-    - [X] db/services
-- [ ] arreglar q el import no sirve (js) // lo voy a ignorar por ahora
-- [ ] poner getstring()
-- [x] agregar isLiked en cada post
+<img src="https://images2.imgbox.com/68/ee/SAVBMJli_o.jpeg" width="250" height="auto">
