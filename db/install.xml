@@ -12,6 +12,8 @@
                 <FIELD NAME="idusuario" TYPE="int" LENGTH="20" NOTNULL="true" SEQUENCE="false"/>
                 <FIELD NAME="fecha" TYPE="datetime" NOTNULL="true" SEQUENCE="false"/>
                 <FIELD NAME="imagen" TYPE="text" NOTNULL="true" SEQUENCE="false"/>
+                <FIELD NAME="nombreusuario" TYPE="text" NOTNULL="true" SEQUENCE="false"/>
+
             </FIELDS>
             <KEYS>
                 <KEY NAME="primary" TYPE="primary" FIELDS="id"/>

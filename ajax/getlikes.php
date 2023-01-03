@@ -27,7 +27,7 @@ require_once(__DIR__.'/../../../config.php');
 global $DB;
 
 $postid = required_param("postid", PARAM_INT);
-$userid = required_param("userid", PARAM_INT);        
+$userid = $USER->id;        
 
 $recordtoinsert = new stdClass();
 $recordtoinsert -> id = 0;

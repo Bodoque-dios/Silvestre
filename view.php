@@ -73,12 +73,13 @@ for ($x = 0; $x <= count($left_column) - 1 ; $x++) {
     $idusuario = $algo-> idusuario;
     $likesCount = $DB->get_record_sql("SELECT COUNT(*) FROM {local_silvestre_likes} WHERE postid = $id");
     $likes = intval($likesCount-> {"count(*)"});
-    $isLiked = $DB->record_exists_sql("SELECT * FROM {local_silvestre_likes} WHERE postid =  $id AND userid = $idusuario");
+    $isLiked = $DB->record_exists_sql("SELECT * FROM {local_silvestre_likes} WHERE postid =  $id AND userid = $USER->id");
 
     $row -> idL =  $id;
     $row -> tituloL = $algo -> titulo;
     $row -> textoL = $algo-> texto;
     $row -> idusuarioL = $idusuario;
+    $row -> nombreusuarioL = $algo->nombreusuario;
     $row -> fechaL = $algo-> fecha;
     $row -> imagenL = $url;
     $row -> LikesL = $likes;
@@ -104,12 +105,13 @@ for ($x = 0; $x <= count($left_column) - 1 ; $x++) {
         $idusuario = $algo-> idusuario;
         $likesCount = $DB->get_record_sql("SELECT COUNT(*) FROM {local_silvestre_likes} WHERE postid =  $id");
         $likes = intval($likesCount -> {"count(*)"});
-        $isLiked = $DB->record_exists_sql("SELECT * FROM {local_silvestre_likes} WHERE postid =  $id AND userid = $idusuario");
+        $isLiked = $DB->record_exists_sql("SELECT * FROM {local_silvestre_likes} WHERE postid =  $id AND userid =  $USER->id");
         
         $row -> idR = $algo-> id;
         $row -> tituloR = $algo-> titulo;
         $row -> textoR = $algo-> texto;
         $row -> idusuarioR = $idusuario;
+        $row -> nombreusuarioR = $algo->nombreusuario;
         $row -> fechaR = $algo-> fecha;
         $row -> imagenR = $url;
         $row -> LikesR = $likes;

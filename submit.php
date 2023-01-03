@@ -51,6 +51,11 @@ if ($mform->is_cancelled()) {
         die();
     }
 
+
+    $nombre = explode(' ', $USER->firstname)[0];
+    $apellido = explode(' ', $USER->lastname)[0];
+
+
     $recordtoinsert = new stdClass();
 
     $recordtoinsert -> id = 0;
@@ -59,6 +64,8 @@ if ($mform->is_cancelled()) {
     $recordtoinsert -> idusuario = $USER->id;
     $recordtoinsert -> fecha = $time->format('Y-m-d H:i:s');
     $recordtoinsert -> imagen =  $name;
+    $recordtoinsert -> nombreusuario =  "$nombre $apellido";
+
 
     $DB->insert_record("local_silvestre_posts", $recordtoinsert);
     

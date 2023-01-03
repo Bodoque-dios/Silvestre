@@ -31,6 +31,7 @@ $string["photo"] = 'Foto';
 $string["cancelled_form"] = 'Oops';
 $string["upload_success"] = '¡Post subido con exito!';
 $string["make_post"] = 'Subir post';
+$string["author"] = 'Autor:';
 
 
 
